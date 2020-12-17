@@ -500,7 +500,7 @@ $connection = mysqli_connect('localhost','root','','fatwa');
             <div class="row fatwa_boxes">
 				<?php $i=0;  foreach($specializes as $specialize): ?>
                 <!--Fatwa card-->
-                <div class="col-lg-4 fatwa_box" data-aos="<?php $i++; if($i%2 == 0) {echo "fade-left";} else {echo "fade-right";} ?>" data-aos-duration="1300">
+                <div class="col-lg-4 fatwa_box" data-aos="<?php $i++; if($i%3 == 1) {echo "fade-left";} elseif($i%3 == 2){echo "zoom-in";} elseif($i%3 == 0){echo "fade-right";}?>" data-aos-duration="1300">
                     <div class="card p-0 hover-shadow">
                         <a href="#"><img class="card-img-top" src="<?php echo $specialize['image']; ?>" alt="aqida_image"></a>
                         <div class="card-body">
@@ -514,117 +514,7 @@ $connection = mysqli_connect('localhost','root','','fatwa');
                 </div>
 				<?php endforeach ?>
 
-                <!--Fatwa card2-->
-                <div class="col-lg-4 fatwa_box" data-aos="zoom-in" data-aos-duration="2000">
-                    <div class="card p-0 hover-shadow">
-                        <a href="#"><img class="card-img-top" src="images/tafseer.jpg" alt="aqida_image"></a>
-                        <div class="card-body">
-                            <a href="#">
-                                <h4 class="card-info card-title">الـــتـــفـــســـيـــر</h4>
-                            </a>
-                            <p class="card-text">التفسير هو مجموعة من المعرفة التي تهدف إلى توضيح المعنى الحقيقي للقرآن
-                                و أوامره و نواهيه و مناسبات الوحي ووقائع نزوله . يعتمد هذا البحث عن المعاني والمرادات
-                                حول القرآن</p>
-                            <a href="#" class="btn btn-primary btn-sm">شاهد القسم</a>
-                        </div>
-                        <div class="author_box d-flex flex-row align-items-center">
-                            <div class="fatwa_author_image">
-                                <img src="images/aqida-author.jpg" alt="author_image" class="img-fluid">
-                            </div>
-                            <div class="fatwa_author_name">الأستاذ ايمن أحمد، <span>متخصص التفسير</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Fatwa card3-->
-                <div class="col-lg-4 fatwa_box" data-aos="fade-right" data-aos-duration="1300">
-                    <div class="card p-0 hover-shadow">
-                        <a href="#"><img class="card-img-top" src="images/hadith.jpg" alt="aqida_image"></a>
-                        <div class="card-body">
-                            <a href="#">
-                                <h4 class="card-info card-title">الحديـــث الشريـــف</h4>
-                            </a>
-                            <p class="card-text">الحديث النبوي الشريف هو كل ما قاله النبي محمد -صلَّ الله عليه وسلم-، أي
-                                كل ما ورد عنه من قول أو فعل أو تقرير أو صفة خلقية أو صفة خلقية أو سيرة وردت عنه، سواء
-                                كانت قبل البعثة أم بعدها</p>
-                            <a href="#" class="btn btn-primary btn-sm">شاهد القسم</a>
-                        </div>
-                        <div class="author_box d-flex flex-row align-items-center">
-                            <div class="fatwa_author_image">
-                                <img src="images/aqida-author.jpg" alt="author_image" class="img-fluid">
-                            </div>
-                            <div class="fatwa_author_name long">الأستاذ أحمد محمد، <span>متخصص الحديث الشريف</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Fatwa card4-->
-                <div class="col-lg-4 fatwa_box" data-aos="fade-left" data-aos-duration="1300">
-                    <div class="card p-0 hover-shadow">
-                        <a href="#"><img class="card-img-top" src="images/fiqh.jpg" alt="aqida_image"></a>
-                        <div class="card-body">
-                            <a href="#">
-                                <h4 class="card-info card-title">الــــفــــقــــه</h4>
-                            </a>
-                            <p class="card-text">الْفِقْهُ في اللغة: الْفَهْمُ للشيء والعلم به، وفهم الأحكام الدقيقة
-                                والمسائل الغامضة، وهو في الأصل مطلق الفهم، وغلب استعماله في العرف مخصوصا بعلم الشريعة؛
-                                لشرفها على سائر العلوم</p>
-                            <a href="#" class="btn btn-primary btn-sm">شاهد القسم</a>
-                        </div>
-                        <div class="author_box d-flex flex-row align-items-center">
-                            <div class="fatwa_author_image">
-                                <img src="images/aqida-author.jpg" alt="author_image" class="img-fluid">
-                            </div>
-                            <div class="fatwa_author_name">الأستاذ محمد عويس، <span>متخصص الفقه</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Fatwa card5-->
-                <div class="col-lg-4 fatwa_box" data-aos="zoom-in" data-aos-duration="2000">
-                    <div class="card p-0 hover-shadow">
-                        <a href="#"><img class="card-img-top" src="images/seerah.jpg" alt="aqida_image"></a>
-                        <div class="card-body">
-                            <a href="#">
-                                <h4 class="card-info card-title">السيـــرة النبويـــة</h4>
-                            </a>
-                            <p class="card-text" style="margin-bottom: 57px">السيرة النبوية تعني مجموع ما ورد لنا من
-                                وقائع حياة النبي صلَّ الله عليه وسلم، وصفاته الخُلقية والخَلقية مضافا إليها غزواته
-                                وسراياه</p>
-                            <a href="#" class="btn btn-primary btn-sm">شاهد القسم</a>
-                        </div>
-                        <div class="author_box d-flex flex-row align-items-center">
-                            <div class="fatwa_author_image">
-                                <img src="images/aqida-author.jpg" alt="author_image" class="img-fluid">
-                            </div>
-                            <div class="fatwa_author_name long">الأستاذ محمد يوسف، <span>متخصص السيرة النبوية</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Fatwa card6-->
-                <div class="col-lg-4 fatwa_box" data-aos="fade-right" data-aos-duration="1300">
-                    <div class="card p-0 hover-shadow">
-                        <a href="#"><img class="card-img-top" src="images/tarbiyah.jpg" alt="aqida_image"></a>
-                        <div class="card-body">
-                            <a href="#">
-                                <h4 class="card-info card-title">التربيـــــة الإسلاميـــــة</h4>
-                            </a>
-                            <p class="card-text">التربية الاسلامية تعبير يقصد به تنشئة الفرد المسلم والمجتمع الاسلامي،
-                                تنشئة متكاملة يراعى فيها الجانب الروحي والمادي، في ضوء الرؤية الاسلامية الشاملة</p>
-                            <a href="#" class="btn btn-primary btn-sm">شاهد القسم</a>
-                        </div>
-                        <div class="author_box d-flex flex-row align-items-center">
-                            <div class="fatwa_author_image">
-                                <img src="images/aqida-author.jpg" alt="author_image" class="img-fluid">
-                            </div>
-                            <div class="fatwa_author_name long">الأستاذ عبدالله أحمد،
-                                <span>متخصص التربية الإسلامية</span></div>
-                        </div>
-                    </div>
-                </div>
+                
 
             </div>
 

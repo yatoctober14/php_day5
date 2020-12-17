@@ -24,12 +24,26 @@ $connection = mysqli_connect('localhost','root','','fatwa');
 		// echo "<br>";
 		// echo "$records[0], $records[1], $records[2]"."<br>";
 		
-		for($i=0; $i<$count;$i++)
+		// for($i=0; $i<$count;$i++)
+		// {
+			// $record = mysqli_fetch_row($results);
+			// echo "<br>";
+			// echo "$record[0], $record[1], $record[2]"."<br>";
+		// }
+		
+		// for($i=0; $i<$count;$i++)
+		// {
+			// $record = mysqli_fetch_assoc($results);
+			// echo "<br>";
+			// echo "{$record["id"]}, {$record["name_ar"]}, {$record["name_en"]}"."<br>";
+		// }
+		
+		while($record = mysqli_fetch_assoc($results))
 		{
-			$record = mysqli_fetch_row($results);
 			echo "<br>";
-			echo "$record[0], $record[1], $record[2]"."<br>";
+			echo "{$record["id"]}, {$record["name_ar"]}, {$record["name_en"]}"."<br>";
 		}
+		mysqli_free_result($results);
 		
 		
 

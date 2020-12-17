@@ -43,6 +43,7 @@ $connection = mysqli_connect('localhost','root','','fatwa');
 			echo "<br>";
 			echo "{$record["id"]}, {$record["name_ar"]}, {$record["name_en"]}"."<br>";
 		}
+		
 		mysqli_free_result($results);
 		
 		

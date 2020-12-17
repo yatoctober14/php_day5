@@ -500,7 +500,7 @@ $connection = mysqli_connect('localhost','root','','fatwa');
             <div class="row fatwa_boxes">
 				<?php $i=0;  foreach($specializes as $specialize): ?>
                 <!--Fatwa card-->
-                <div class="col-lg-4 fatwa_box" data-aos="<?php $i++; if($i%2 == 0) {echo "fade-left";} else {echo "fade-right";} ?> " data-aos-duration="1300">
+                <div class="col-lg-4 fatwa_box" data-aos="<?php $i++; if($i%2 == 0) {echo "fade-left";} else {echo "fade-right";} ?>" data-aos-duration="1300">
                     <div class="card p-0 hover-shadow">
                         <a href="#"><img class="card-img-top" src="<?php echo $specialize['image']; ?>" alt="aqida_image"></a>
                         <div class="card-body">

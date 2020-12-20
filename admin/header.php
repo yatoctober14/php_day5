@@ -264,13 +264,13 @@
 
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.php" target="_blank" style="color: #f3fa7c"><i class="bx bx-home" style="color: #daff00"></i>
+                <li><a href="<?php echo at_root()."index.php"?>" target="_blank" style="color: #f3fa7c"><i class="bx bx-home" style="color: #daff00"></i>
                     <span>الصفحة الرئيسية</span></a></li>
-                <li class="active"><a href="admin.php#milestones"><i class="bx bx-book-content"></i> <span>الإحصائيات</span></a></li>
-                <li><a href="admin-questions.php#questions"><i class="bx bx-question-mark"></i> <span>الأسئلة</span></a></li>
-                <li><a href="admin-answers.php#answers"><i class="bx bxs-book-reader"></i> <span>الأجوبة</span></a></li>
-                <li><a href="admin-user_admin.php#admins"><i class="bx bx-user"></i> <span>الشيوخ</span></a></li>
-                <li><a href="admin-users.php#users"><i class="bx bx-user"></i> <span>المستخدمون</span></a></li>
+                <li class="active"><a href="<?php echo at_root()."admin/admin.php#milestones"?>"><i class="bx bx-book-content"></i> <span>الإحصائيات</span></a></li>
+                <li><a href="<?php echo at_root()."admin/admin-questions.php#questions"?>"><i class="bx bx-question-mark"></i> <span>الأسئلة</span></a></li>
+                <li><a href="<?php echo at_root()."admin/admin-answers.php#answers"?>"><i class="bx bxs-book-reader"></i> <span>الأجوبة</span></a></li>
+                <li><a href="<?php echo at_root()."admin/admin-user_admin.php#admins"?>"><i class="bx bx-user"></i> <span>الشيوخ</span></a></li>
+                <li><a href="<?php echo at_root()."admin/admin-users.php#users"?>"><i class="bx bx-user"></i> <span>المستخدمون</span></a></li>
                 <li>
                     <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
